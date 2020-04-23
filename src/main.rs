@@ -15,7 +15,7 @@ impl Arguments {
 fn parse(args: &[String]) -> Result<Arguments, &str> {
     // covid19 --help
     if args.len() == 2 {
-        if args[1].contains("--help") {
+        if args[1] == "--help" {
             return Ok(Arguments {
                 flag: "--help".to_string(),
                 state: "".to_string(),
